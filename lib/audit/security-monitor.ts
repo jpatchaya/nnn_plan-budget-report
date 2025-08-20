@@ -548,11 +548,11 @@ export class SecurityMonitor {
 
     sampleAlerts.forEach(alertData => {
       const alert: SecurityAlert = {
+        ...alertData as SecurityAlert,
         id: `alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
         timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000),
         relatedLogs: [],
         metadata: {},
-        ...alertData as SecurityAlert,
       }
       this.alerts.push(alert)
     })

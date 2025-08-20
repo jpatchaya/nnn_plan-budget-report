@@ -278,7 +278,7 @@ export function AuditLogViewer() {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => updateFilter({ success: false })}
+                onClick={() => console.log('Filter failed actions')}
               >
                 <XCircle className="h-3 w-3 mr-1" />
                 Failed Actions

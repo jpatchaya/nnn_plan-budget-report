@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -52,7 +52,7 @@ export function SecurityDashboard() {
   const [severityFilter, setSeverityFilter] = useState<AlertSeverity | 'ALL'>('ALL')
 
   // Load security data
-  const loadSecurityData = async () => {
+  const loadSecurityData = useCallback(async () => {
     setLoading(true)
     try {
       // Get alerts with filters
@@ -76,11 +76,11 @@ export function SecurityDashboard() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [statusFilter, severityFilter])
 
   useEffect(() => {
     loadSecurityData()
-  }, [statusFilter, severityFilter])
+  }, [loadSecurityData])
 
   // Handle alert status update
   const handleStatusUpdate = async (alertId: string, newStatus: AlertStatus) => {
@@ -426,7 +426,7 @@ export function SecurityDashboard() {
                     {Object.entries(metrics.alertsByType).map(([type, count]) => (
                       <div key={type} className="flex justify-between items-center">
                         <span className="text-sm">{type.replace(/_/g, ' ')}</span>
-                        <Badge variant="outline">{count}</Badge>
+                        <Badge variant="outline">{String(count)}</Badge>
                       </div>
                     ))}
                   </div>
@@ -446,7 +446,7 @@ export function SecurityDashboard() {
                       <div key={severity} className="flex justify-between items-center">
                         <span className="text-sm">{severity}</span>
                         <Badge className={getSeverityColor(severity as AlertSeverity)}>
-                          {count}
+                          {String(count)}
                         </Badge>
                       </div>
                     ))}
