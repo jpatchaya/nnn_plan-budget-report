@@ -6,13 +6,29 @@ Click the button below to deploy this project to Vercel:
 
 ## Manual Deploy
 
-If the button doesn't work, try:
+To deploy manually:
 
-1. Fork the repository
-2. Go to https://vercel.com/new
-3. Import your forked repository
-4. Deploy
+1. Go to https://vercel.com/new
+2. Select "Import Git Repository"
+3. Enter the GitHub URL: `https://github.com/jpatchaya/nnn_plan-budget-report`
+4. Click "Import"
+5. Configure project settings (optional):
+   - Framework Preset: Next.js (auto-detected)
+   - Build Command: `npm run build`
+   - Output Directory: `.next`
+6. Click "Deploy"
+
+## Deployment Status
+
+✅ **Build Status**: All TypeScript errors have been fixed and the build passes successfully.
 
 ## Environment Variables
 
 No environment variables required for basic deployment.
+
+## Latest Updates
+
+- Fixed TypeScript build errors in SecurityDashboard component
+- Fixed security-monitor.ts spread operator issue
+- All pages now use DNP branding (กรมอุทยานแห่งชาติ สัตว์ป่า และพันธุ์พืช)
+- System name: โครงการพัฒนาระบบแผนงาน งบประมาณ และการรายงานผล
