@@ -1,0 +1,9 @@
+.git
+.next
+node_modules
+.env.local
+*.log
+.DS_Store
+*.backup
+*.bak*
+fix_*.py

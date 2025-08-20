@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(npm install)",
+      "Bash(mv:*)",
+      "Bash(grep:*)",
+      "Bash(npm run build:*)",
+      "Bash(for path in \"/\" \"/login\" \"/master-data\" \"/budget-request\" \"/work-plan\" \"/allocation\" \"/transfer\" \"/reports\" \"/import-budget\" \"/compare\" \"/export\" \"/dpis\" \"/users\" \"/settings\")",
+      "Bash(do echo \"Testing $path:\")",
+      "Bash(curl:*)",
+      "Bash(done)",
+      "Bash(/usr/bin/curl -s -o /dev/null -w \"%{http_code}\\n\" http://localhost:8080/)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(rm:*)",
+      "Bash(/usr/bin/curl -s -o /dev/null -w \"%{http_code}\\n\" http://localhost:3002/)",
+      "Bash(for path in \"/\" \"/settings\" \"/users\" \"/master-data\" \"/login\" \"/budget-request\" \"/work-plan\" \"/allocation\" \"/transfer\" \"/reports\" \"/import-budget\" \"/compare\" \"/export\" \"/dpis\")",
+      "Bash(do echo -n \"Testing $path: \")",
+      "Bash(do printf \"%-20s: \" \"$path\")",
+      "Bash(PORT=3003 npm run start)",
+      "Bash(for path in \"/\" \"/settings\" \"/users\" \"/master-data\" \"/budget-request\" \"/work-plan\" \"/allocation\" \"/transfer\" \"/reports\" \"/import-budget\" \"/compare\" \"/export\" \"/dpis\")",
+      "Bash(npm run start:*)",
+      "Bash(for path in \"/\" \"/login\" \"/settings\" \"/users\" \"/master-data\" \"/budget-request\" \"/work-plan\" \"/allocation\" \"/transfer\" \"/reports\" \"/import-budget\" \"/compare\" \"/export\" \"/dpis\")",
+      "Bash(npm run type-check:*)",
+      "Bash(npm run test:ci:*)",
+      "Bash(/usr/bin/curl -s -o /dev/null -w \"%{http_code}\\n\" http://localhost:3000/login)",
+      "Bash(python3:*)",
+      "Bash(for path in \"/\" \"/master-data\" \"/budget-request\" \"/work-plan\" \"/allocation\" \"/transfer\" \"/reports\" \"/import-budget\" \"/compare\" \"/export\" \"/dpis\" \"/users\" \"/settings\")",
+      "Bash(do)",
+      "Bash(printf:*)",
+      "Bash(/usr/bin/curl -s http://localhost:3000/login)",
+      "Bash(npm install:*)",
+      "Bash(VERCEL_TOKEN=\"EPdYTH0v1M0Z0LAIaQ87hbsV\" vercel --prod --yes)",
+      "Bash(vercel:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "outputStyle": "Explanatory"
+}
