@@ -34,7 +34,9 @@
       "Bash(VERCEL_TOKEN=\"EPdYTH0v1M0Z0LAIaQ87hbsV\" vercel --prod --yes)",
       "Bash(vercel:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

@@ -116,7 +116,7 @@ export default function HomePage() {
       </Section>
 
       {/* Main Content Grid */}
-      <Grid columns={2} className="mt-6">
+      <Grid cols={2} className="mt-6">
         <GridItem>
           <Card>
             <CardHeader>
